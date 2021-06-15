@@ -1,0 +1,54 @@
+{
+    "name": "webup/laravel-twilio-channel",
+    "description": "Laravel's notification channel for twilio",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Baptiste Ducatel",
+            "email": "baptiste@agence-webup.com",
+            "homepage": "http://agence-webup.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Gregorio Hernández Caso",
+            "email": "gregoriohc@gmail.com",
+            "homepage": "https://github.com/gregoriohc",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "twilio/sdk": "~5.16",
+        "illuminate/notifications": "^5.1|^6.0",
+        "illuminate/support": "^5.1|^6.0",
+        "illuminate/events": "^5.1|^6.0",
+        "illuminate/queue": "^5.1|^6.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.5",
+        "phpunit/phpunit": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webup\\LaravelTwilioChannel\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Webup\\LaravelTwilioChannel\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webup\\LaravelTwilioChannel\\TwilioProvider"
+            ]
+        }
+    }
+}
